@@ -1,172 +1,145 @@
-<!-- file: index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mood Playlist Generator</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lyric Adams | Portfolio & Resume</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom right, #a2d2ff, #cdb4db);
-      text-align: center;
-      padding: 40px;
-    }
-    h1 {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9fb;
       color: #333;
+      margin: 0;
+      padding: 0;
     }
-    input {
-      padding: 10px;
-      font-size: 16px;
-      border-radius: 5px;
-      border: 1px solid #888;
-      width: 200px;
-    }
-    button {
-      padding: 10px 15px;
-      font-size: 16px;
-      border: none;
-      border-radius: 5px;
-      background-color: #ffafcc;
+    header {
+      background-color: #222;
       color: white;
-      cursor: pointer;
-      margin: 5px;
+      padding: 2rem;
+      text-align: center;
     }
-    button:hover {
-      background-color: #ff8fab;
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      color: #bbb;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem 2rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      border-bottom: 2px solid #444;
+      padding-bottom: 0.3rem;
+      margin-top: 2rem;
+      color: #222;
     }
     ul {
       list-style-type: none;
       padding: 0;
-      margin-top: 20px;
     }
-    li {
-      background: white;
-      margin: 10px auto;
-      padding: 15px;
-      width: 70%;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 15px;
+    ul li {
+      margin-bottom: 0.5rem;
     }
-    img {
-      width: 80px;
-      height: 80px;
-      border-radius: 8px;
-      object-fit: cover;
+    .section {
+      margin-bottom: 1.5rem;
     }
-    .song-info {
-      text-align: left;
-      flex: 1;
+    .contact {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 1rem;
     }
-    audio {
-      margin-top: 5px;
-      width: 100%;
+    .contact a {
+      color: #0077cc;
+      text-decoration: none;
     }
-    .like-buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-    }
-    .like-buttons button {
-      background-color: #bde0fe;
-      color: #333;
-      font-size: 14px;
-      padding: 5px;
-    }
-    .like-buttons button:hover {
-      background-color: #a2d2ff;
+    .skills span {
+      display: inline-block;
+      background-color: #e0ecff;
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      margin: 0.3rem;
+      font-size: 0.95rem;
     }
   </style>
 </head>
 <body>
-  <h1>🎵 Mood Playlist Generator 🎵</h1>
-  <p>Type your mood (like <b>happy</b>, <b>sad</b>, <b>chill</b>, or <b>energetic</b>)</p>
-  <input id="moodInput" type="text" placeholder="Enter your mood...">
-  <button onclick="generatePlaylist()">Generate Playlist</button>
-  <button onclick="shufflePlaylist()">Shuffle</button>
+  <header>
+    <h1>Lyric Adams</h1>
+    <p>Creative Student | Artist | Aspiring Graphic Designer</p>
+    <div class="contact">
+      <p>📍 Ewa Beach, HI | 📞 (808) 397-3533 | ✉️ <a href="mailto:lyrickadams@gmail.com">lyrickadams@gmail.com</a></p>
+    </div>
+  </header>
 
-  <ul id="playlist"></ul>
+  <main>
+    <section class="section">
+      <h2>Objective</h2>
+      <p>Creative and driven high school junior with a passion for art and design, seeking opportunities to grow in the graphic arts field. Excited to pursue a future career in graphic design and visual storytelling through internships, workshops, or community-based art projects.</p>
+    </section>
 
-  <script>
-    let currentSongs = [];
-    let likedArtists = [];
+    <section class="section">
+      <h2>Education</h2>
+      <p><strong>Hanalani Schools</strong>, Mililani, HI<br>Expected Graduation: May 2026 | GPA: 3.4</p>
+      <p><strong>Relevant Courses:</strong> Honors English, Intro to Digital Arts, AP U.S. History, Geometry, Art I & II</p>
+    </section>
 
-    async function generatePlaylist() {
-      const mood = document.getElementById("moodInput").value.toLowerCase().trim();
-      const playlistContainer = document.getElementById("playlist");
-      playlistContainer.innerHTML = "<li>Loading songs...</li>";
+    <section class="section skills">
+      <h2>Skills</h2>
+      <span>Creative thinker</span><span>Public speaking</span><span>Leadership</span><span>Google Slides</span><span>Microsoft PowerPoint</span><span>Detail-oriented</span><span>Visual storytelling</span>
+    </section>
 
-      // Remove any old JSONP script tags
-      const oldScript = document.getElementById("jsonpScript");
-      if (oldScript) oldScript.remove();
+    <section class="section">
+      <h2>Co-Curricular Activities</h2>
+      <ul>
+        <li><strong>Key Club – Member (Aug 2023–Present)</strong><br>Participated in volunteer projects focused on school and community service.</li>
+        <li><strong>Music Appreciation Club – Founder & President (Aug 2022–Present)</strong><br>Created a space for students to explore and share music of all genres; organized listening sessions and guest speakers.</li>
+        <li><strong>Art Club – Member (Aug 2023–Present)</strong><br>Collaborated on visual art projects including murals and school event posters.</li>
+      </ul>
+    </section>
 
-      // If user liked artists, add them to the search
-      const searchQuery = likedArtists.length > 0 ? `${mood} ${likedArtists.join(" ")}` : mood;
+    <section class="section">
+      <h2>Leadership Experience</h2>
+      <ul>
+        <li><strong>Table Leader, Spiritual Catholic Retreat (Oct 2022)</strong><br>Led a group of underclassmen through discussions and reflection activities.</li>
+        <li><strong>Founder & President, Music Appreciation Club (Aug 2022–Present)</strong><br>Built and organized the club, recruiting members and coordinating weekly events.</li>
+      </ul>
+    </section>
 
-      // Create a new JSONP script tag for Deezer API
-      const script = document.createElement("script");
-      script.id = "jsonpScript";
-      script.src = `https://api.deezer.com/search?q=${encodeURIComponent(searchQuery)}&limit=8&output=jsonp&callback=handleResponse`;
-      document.body.appendChild(script);
-    }
+    <section class="section">
+      <h2>Volunteer Experience</h2>
+      <ul>
+        <li><strong>Hospice Volunteer, Malama Ola Health Services (Jan–May 2023)</strong><br>Provided companionship to elderly patients through reading, art, and music.</li>
+        <li><strong>Community Mural Project Volunteer, Honolulu Art Walk (June 2023)</strong><br>Assisted in painting a public mural to beautify a local neighborhood space.</li>
+      </ul>
+    </section>
 
-    // JSONP callback for Deezer
-    function handleResponse(data) {
-      const playlistContainer = document.getElementById("playlist");
-      playlistContainer.innerHTML = "";
+    <section class="section">
+      <h2>Honors & Awards</h2>
+      <ul>
+        <li>Thomas J. Vincent Art Scholarship (2023–2025)</li>
+        <li>Recognition for Founding Music Appreciation Club</li>
+        <li>ILH JV Golf – 4th Place Individual / “Newcomer” Award (2024)</li>
+        <li>ILH Varsity II Girls' Basketball – Team State Champions (2025)</li>
+        <li>ILH Varsity II Golf – Team 2nd Place, Individual 6th Place (2025)</li>
+      </ul>
+    </section>
 
-      if (!data || !data.data || data.data.length === 0) {
-        playlistContainer.innerHTML = "<li>No songs found for that mood.</li>";
-        return;
-      }
-
-      currentSongs = data.data;
-      displaySongs(currentSongs);
-    }
-
-    function displaySongs(songs) {
-      const playlistContainer = document.getElementById("playlist");
-      playlistContainer.innerHTML = "";
-
-      songs.forEach(song => {
-        const li = document.createElement("li");
-        li.innerHTML = `
-          <img src="${song.album.cover_medium}" alt="Album Art">
-          <div class="song-info">
-            <strong>${song.title}</strong><br>
-            <em>${song.artist.name}</em><br>
-            <audio controls src="${song.preview}"></audio>
-          </div>
-          <div class="like-buttons">
-            <button onclick="likeSong('${song.artist.name}')">❤️ Like</button>
-            <button onclick="dislikeSong('${song.title}')">👎 Dislike</button>
-          </div>
-        `;
-        playlistContainer.appendChild(li);
-      });
-    }
-
-    function shufflePlaylist() {
-      if (currentSongs.length === 0) return;
-      currentSongs.sort(() => Math.random() - 0.5);
-      displaySongs(currentSongs);
-    }
-
-    function likeSong(artist) {
-      if (!likedArtists.includes(artist)) {
-        likedArtists.push(artist);
-        alert(`You liked ${artist}! We'll suggest more songs like that.`);
-      }
-    }
-
-    function dislikeSong(title) {
-      currentSongs = currentSongs.filter(song => song.title !== title);
-      displaySongs(currentSongs);
-    }
-  </script>
+    <section class="section">
+      <h2>Athletics</h2>
+      <ul>
+        <li><strong>Varsity Girls’ Basketball Team (Oct 2023 – Mar 2024)</strong><br>Contributed to ILH Varsity II State Championship win.</li>
+        <li><strong>Varsity Golf Team (Aug 2023 – Apr 2024)</strong><br>Competed in ILH Varsity II division; helped team place 2nd overall and placed 6th individually.</li>
+      </ul>
+    </section>
+  </main>
 </body>
 </html>
+
